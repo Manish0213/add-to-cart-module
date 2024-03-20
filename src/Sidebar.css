@@ -1,0 +1,15 @@
+.sidebarContainer {
+    /* border: 2px solid green; */
+}
+
+.cardContent{
+    /* border: 2px solid red; */
+    z-index: 5;
+    position: relative;
+    left: 209%;
+}
+
+.card-container{
+    /* border: 2px solid blue;   */
+     position: absolute;
+}
