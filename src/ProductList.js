@@ -7,15 +7,15 @@ const ProductList = ({isVisible,setIsVisible,cards,addItemToCart}) => {
     if(!isVisible){
       setIsVisible(true);
     }
-    addItemToCart(card);
+    addItemToCart(card._id,'increase');
   }
 
   return (
     <div className="row mx-2 my-3">
-      { cards.map((card,index)=>(
-        <div className="col-md-3">
+      { cards.map((card)=>(
+        <div className="col-md-3" key={card._id}>
           <div className="card" style={{width: "18rem"}}>
-            <img className="card-img-top" src={Cap1} alt="Card image cap" width="200" height="200" />
+            <img className="card-img-top" src={`http://localhost:5000/uploads/${card.imagePath}`} alt="Card image cap" width="200" height="200" />
             <div className="card-body">
               <h5 className="card-title">{card.title}</h5>
               <p className="card-text">
